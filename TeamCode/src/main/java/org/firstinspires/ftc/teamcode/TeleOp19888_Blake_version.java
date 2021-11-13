@@ -39,7 +39,7 @@ public class TeleOp19888_Blake_version extends LinearOpMode {
         motorRight = hardwareMap.dcMotor.get("motor2");
         motorWheel = hardwareMap.dcMotor.get("motor3");
         motorSlide = hardwareMap.dcMotor.get("motor4");
-        servoClaw = hardwareMap.servo.get("servo0");
+        servoClaw = hardwareMap.servo.get("servo1");
 
         waitForStart();
 
