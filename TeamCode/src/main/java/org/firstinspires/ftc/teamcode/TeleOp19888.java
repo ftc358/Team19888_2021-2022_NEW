@@ -13,13 +13,7 @@ import com.qualcomm.robotcore.hardware.CRServo;
 These are the controls as of right now.
 Feel free to edit these as you edit this code
 
-right joystick --> Moving the robot forward/backward
-left joystick --> Making the robot turn left/right
-right trigger --> Spinning wheel
-right bumper --> moving the linear slide up
-left bumper --> moving the linear slide down
-a --> open claw
-b --> close claw
+
 
  */
 
@@ -68,6 +62,8 @@ public class TeleOp19888 extends LinearOpMode {
             //wheel
             if (gamepad1.x) {
                 motorWheel.setPower(1);
+            }else if(gamepad1.y){
+                motorWheel.setPower(-1);
             }else{
                 motorWheel.setPower(0);
             }
