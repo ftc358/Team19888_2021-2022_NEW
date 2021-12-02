@@ -88,6 +88,7 @@ public class  VuforiaTest extends LinearOpMode {
         vuforia = ClassFactory.getInstance().createVuforia(parameters);
 
         // Loading trackables is not necessary for the TensorFlow Object Detection engine.
+        initTfod();
     }
 
     private void initTfod() {
