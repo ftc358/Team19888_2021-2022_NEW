@@ -21,7 +21,9 @@ Feel free to edit these as you edit this code
 public class TeleOp19888 extends LinearOpMode {
     //declaring motors
     private DcMotor motorLeft;
+    private DcMotor motorBackLeft;
     private DcMotor motorRight;
+    private DcMotor motorBackRight;
     private DcMotor motorWheel;
     private DcMotor motorSlide;
     private Servo servoClaw;
@@ -31,7 +33,9 @@ public class TeleOp19888 extends LinearOpMode {
     public void runOpMode() throws InterruptedException {
         //initializing motors/servos
         motorLeft = hardwareMap.dcMotor.get("motorLeft");
+        motorBackLeft = hardwareMap.dcMotor.get("motorBackLeft");
         motorRight = hardwareMap.dcMotor.get("motorRight");
+        motorBackRight = hardwareMap.dcMotor.get("motorBackRight");
         motorWheel = hardwareMap.dcMotor.get("motorWheel");
         motorSlide = hardwareMap.dcMotor.get("motorSlide");
         servoClaw = hardwareMap.servo.get("servoClaw");
@@ -41,7 +45,9 @@ public class TeleOp19888 extends LinearOpMode {
         while (opModeIsActive()) {
             //foward back left right
             motorLeft.setPower(-gamepad1.right_stick_y);
+            motorBackLeft.setPower(-gamepad1.right_stick_y);
             motorRight.setPower(-gamepad1.left_stick_y);
+            motorBackRight.setPower(-gamepad1.left_stick_y);
 
             //lift
             if (gamepad1.left_bumper || gamepad1.right_bumper) {
