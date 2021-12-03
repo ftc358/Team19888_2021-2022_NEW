@@ -68,7 +68,7 @@ public abstract class RobotMain19888 extends LinearOpMode {
         motorRight.setMode(DcMotor.RunMode.RUN_TO_POSITION);
         motorBackRight.setMode(DcMotor.RunMode.RUN_TO_POSITION);
 
-        while (motorLeft.isBusy() && motorBackLeft.isBusy() && motorRight.isBusy() && rb.isBusy()){
+        while (motorLeft.isBusy() && motorBackLeft.isBusy() && motorRight.isBusy() && motorBackRight.isBusy()){
             telemetry.addData("lf", -motorLeft.getCurrentPosition());
             telemetry.addData("rf", -motorRight.getCurrentPosition());
             telemetry.addData("lb", -motorBackLeft.getCurrentPosition());
