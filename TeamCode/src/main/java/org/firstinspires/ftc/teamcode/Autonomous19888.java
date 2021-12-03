@@ -21,6 +21,7 @@ public class Autonomous19888 extends RobotMain19888 {
 
         waitForStart();
         while (opModeIsActive() && !done) {
+            // TEST: for drive and turn factors
             forward(10, 0.1);
             // turn(90, 0.1)
             done = true;
