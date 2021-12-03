@@ -18,7 +18,8 @@ Feel free to edit these as you edit this code
  */
 
 @TeleOp (name = "teleop 19888 1")
-public class TeleOp19888 extends LinearOpMode {
+public class TeleOp19888 extends RobotMain19888 {
+
     //declaring motors
 
 //  commenting these motor declarations out because we already inherited RobotMain19888

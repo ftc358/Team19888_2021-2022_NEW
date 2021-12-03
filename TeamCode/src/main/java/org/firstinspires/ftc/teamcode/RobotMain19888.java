@@ -5,18 +5,41 @@ import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.Servo;
 
 public abstract class RobotMain19888 extends LinearOpMode {
-    private DcMotor motorLeft;
-    private DcMotor motorBackLeft;
-    private DcMotor motorRight;
-    private DcMotor motorBackRight;
-    private DcMotor motorWheel;
-    private DcMotor motorSlide;
-    private Servo servoClaw;
+    protected DcMotor motorLeft;
+    protected DcMotor motorBackLeft;
+    protected DcMotor motorRight;
+    protected DcMotor motorBackRight;
+    protected DcMotor motorWheel;
+    protected DcMotor motorSlide;
+    protected Servo servoClaw;
 //  private CRServo servoClaw; // servoClaw is not a continuous rotation servo? please double check
 
     // for autonomous; need to edit the values though
     final double DRIVE_FACTOR = 100;
     final double TURN_FACTOR = 200;
+
+    public void INITIALIZE() throws InterruptedException {
+// commented out stuff are from 358
+        motorLeft = hardwareMap.dcMotor.get("motorLeft");
+        motorBackLeft = hardwareMap.dcMotor.get("motorBackLeft");
+        motorRight = hardwareMap.dcMotor.get("motorRight");
+        motorBackRight = hardwareMap.dcMotor.get("motorBackRight");
+
+//        slideMotor = hardwareMap.dcMotor.get("slideMotor");
+//        slideMotor.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
+//        crMotor = hardwareMap.dcMotor.get("crMotor");
+//        crMotor.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
+
+        motorLeft.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
+        motorBackLeft.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
+        motorRight.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
+        motorBackRight.setZeroPowerBehavior(DcMotor. ZeroPowerBehavior.BRAKE);
+
+        motorRight.setDirection(DcMotor.Direction.REVERSE);
+        motorBackRight.setDirection(DcMotor.Direction.REVERSE);
+//        slideMotor.setDirection(DcMotor.Direction.REVERSE);
+    }
+
 
     public void forward (int inch, double power) {
         int ticks = (int) (inch * DRIVE_FACTOR);
