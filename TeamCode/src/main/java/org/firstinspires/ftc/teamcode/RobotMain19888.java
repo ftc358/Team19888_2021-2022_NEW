@@ -69,10 +69,10 @@ public abstract class RobotMain19888 extends LinearOpMode {
         motorBackRight.setMode(DcMotor.RunMode.RUN_TO_POSITION);
 
         while (motorLeft.isBusy() && motorBackLeft.isBusy() && motorRight.isBusy() && motorBackRight.isBusy()){
-            telemetry.addData("lf", -motorLeft.getCurrentPosition());
-            telemetry.addData("rf", -motorRight.getCurrentPosition());
-            telemetry.addData("lb", -motorBackLeft.getCurrentPosition());
-            telemetry.addData("rb", -motorBackRight.getCurrentPosition());
+            telemetry.addData("motorLeft", -motorLeft.getCurrentPosition());
+            telemetry.addData("motorRight", -motorRight.getCurrentPosition());
+            telemetry.addData("motorBackLeft", -motorBackLeft.getCurrentPosition());
+            telemetry.addData("motorBackRight", -motorBackRight.getCurrentPosition());
             telemetry.update();
             //Wait Until Target Position is Reached
         }
@@ -107,10 +107,10 @@ public abstract class RobotMain19888 extends LinearOpMode {
         motorBackRight.setMode(DcMotor.RunMode.RUN_TO_POSITION);
 
         while (motorLeft.isBusy() && motorBackLeft.isBusy() && motorRight.isBusy() && motorBackRight.isBusy()){
-            telemetry.addData("lf", -motorLeft.getCurrentPosition());
-            telemetry.addData("rf", -motorRight.getCurrentPosition());
-            telemetry.addData("lb", -motorBackLeft.getCurrentPosition());
-            telemetry.addData("rb", -motorBackRight.getCurrentPosition());
+            telemetry.addData("motorLeft", -motorLeft.getCurrentPosition());
+            telemetry.addData("motorRight", -motorRight.getCurrentPosition());
+            telemetry.addData("motorBackLeft", -motorBackLeft.getCurrentPosition());
+            telemetry.addData("motorBackRight", -motorBackRight.getCurrentPosition());
             telemetry.update();
             //Wait Until Target Position is Reached
         }
