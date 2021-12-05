@@ -15,8 +15,8 @@ public abstract class RobotMain19888 extends LinearOpMode {
 //  private CRServo servoClaw; // servoClaw is not a continuous rotation servo? please double check
 
     // for autonomous; need to edit the values though
-    final double DRIVE_FACTOR = 100;
-    final double TURN_FACTOR = 200;
+    final double DRIVE_FACTOR = 114.59156;
+    final double TURN_FACTOR = 10;
 
     public void INITIALIZE() throws InterruptedException {
 // commented out stuff are from 358
