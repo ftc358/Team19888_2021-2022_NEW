@@ -18,15 +18,20 @@ Feel free to edit these as you edit this code
  */
 
 @TeleOp (name = "teleop 19888 1")
-public class TeleOp19888 extends LinearOpMode {
+public class TeleOp19888 extends RobotMain19888 {
+
     //declaring motors
-    private DcMotor motorLeft;
-    private DcMotor motorBackLeft;
-    private DcMotor motorRight;
-    private DcMotor motorBackRight;
-    private DcMotor motorWheel;
-    private DcMotor motorSlide;
-    private Servo servoClaw;
+
+//  commenting these motor declarations out because we already inherited RobotMain19888
+//    private DcMotor motorLeft;
+//    private DcMotor motorBackLeft;
+//    private DcMotor motorRight;
+//    private DcMotor motorBackRight;
+
+
+//    private DcMotor motorWheel;
+//    private DcMotor motorSlide;
+//    private Servo servoClaw;
 //    private CRServo servoClaw;
 
 

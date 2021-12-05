@@ -1,12 +1,6 @@
 package org.firstinspires.ftc.teamcode;
 
-import android.util.Log;
-
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
-
-import java.util.concurrent.TimeUnit;
-
-import static java.lang.Math.sqrt;
 
 /*
 
@@ -15,6 +9,25 @@ import static java.lang.Math.sqrt;
 Most of the code is not complete yet.
 
  */
+
+@Autonomous
+public class Autonomous19888 extends RobotMain19888 {
+
+    private boolean done = false;
+
+    public void runOpMode() throws InterruptedException {
+
+        INITIALIZE();
+
+        waitForStart();
+        while (opModeIsActive() && !done) {
+            // TEST: for drive and turn factors
+            // forward(5, 1);
+            turn(90, 1);
+            done = true;
+        }
+    }
+}
 
 //@Autonomous (name = "autonomous 1")
 //public class AutoC358_Red extends AutoEngine358 {
