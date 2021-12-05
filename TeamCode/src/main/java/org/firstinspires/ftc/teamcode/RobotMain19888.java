@@ -10,6 +10,6 @@ public abstract class RobotMain19888 extends LinearOpMode {
     protected DcMotor rb;
 
     // for autonomous
-    final double DRIVE_FACTOR = 100;
+    final double DRIVE_FACTOR = 114.59156;
     final double TURN_FACTOR = 200;
 }
