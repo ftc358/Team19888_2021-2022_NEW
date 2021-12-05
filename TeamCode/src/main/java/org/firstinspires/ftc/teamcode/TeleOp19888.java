@@ -49,31 +49,28 @@ public class TeleOp19888 extends RobotMain19888 {
 
         while (opModeIsActive()) {
             //foward back left right
-            motorLeft.setPower(-gamepad1.right_stick_y);
-            motorBackLeft.setPower(-gamepad1.right_stick_y);
-            motorRight.setPower(-gamepad1.left_stick_y);
-            motorBackRight.setPower(-gamepad1.left_stick_y);
+                motorLeft.setPower(gamepad1.left_stick_y);
+                motorBackLeft.setPower(gamepad1.left_stick_y);
+                motorRight.setPower(-gamepad1.right_stick_y);
+                motorBackRight.setPower(-gamepad1.right_stick_y);
+
 
             //lift
-            if (gamepad1.left_bumper || gamepad1.right_bumper) {
-                motorSlide.setPower(1);
-            }else if ((gamepad1.left_trigger != 0) || (gamepad1.right_trigger != 0)) {
-                motorSlide.setPower(-1);
-            }else {
-                motorSlide.setPower(0);
-            }
+            motorSlide.setPower(-gamepad2.right_stick_y);
+            motorSlide.setPower(-gamepad2.left_stick_y);
+
 
             //claw
-            if (gamepad1.a) {
+            if (gamepad2.a) {
                 servoClaw.setPosition(servoClaw.getPosition()+0.1);
-            }else if (gamepad1.b) {
+            }else if (gamepad2.b) {
                 servoClaw.setPosition(servoClaw.getPosition()-0.1);
             }
 
             //wheel
-            if (gamepad1.x) {
+            if (gamepad2.x) {
                 motorWheel.setPower(1);
-            }else if(gamepad1.y){
+            }else if(gamepad2.y){
                 motorWheel.setPower(-1);
             }else{
                 motorWheel.setPower(0);
