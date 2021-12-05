@@ -23,7 +23,7 @@ public class Autonomous19888 extends RobotMain19888 {
         while (opModeIsActive() && !done) {
             // TEST: for drive and turn factors
             // forward(5, 1);
-            // turn(90, 1);
+            turn(90, 1);
             done = true;
         }
     }
